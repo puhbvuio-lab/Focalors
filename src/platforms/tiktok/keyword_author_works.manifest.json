@@ -1,0 +1,9 @@
+{
+  "tool_id": "tiktok_keyword_author_works",
+  "name": "TikTok 关键词作者作品采集",
+  "category": "TikTok",
+  "summary": "按关键词发现 TikTok 博主，进入博主主页采集简介、粉丝数和最新视频；输出“博主信息”“博主对应视频”两个分表，快速模式默认每作者最多取最新 50 条。",
+  "entrypoint": "src.platforms.tiktok.windows.TikTokKeywordAuthorWorksWindow",
+  "implementation_path": "platforms/tiktok/keyword_author_works.py",
+  "tags": ["TikTok", "keyword", "author", "profile", "works"]
+}

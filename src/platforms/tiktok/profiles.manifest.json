@@ -1,0 +1,9 @@
+{
+  "tool_id": "tiktok_profile_directory",
+  "name": "TikTok 博主信息",
+  "category": "TikTok",
+  "summary": "按博主主页链接批量提取博主主页链接、博主名称、博主ID、粉丝量和简介。",
+  "entrypoint": "src.platforms.tiktok.windows.TikTokProfilesWindow",
+  "implementation_path": "platforms/tiktok/profiles.py",
+  "tags": ["TikTok", "profile", "followers", "bio"]
+}

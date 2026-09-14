@@ -1,0 +1,9 @@
+{
+  "tool_id": "x_profile_tweets",
+  "name": "X 博主推文采集",
+  "category": "X/Twitter",
+  "summary": "按博主主页链接先通过 X 搜索页进入作者主页，再采集最新推文样本；默认每个博主最多取最新 50 条，只采作者作品本身，不采评论。",
+  "entrypoint": "src.platforms.x_twitter.windows.XProfileTweetsWindow",
+  "implementation_path": "platforms/x_twitter/profile_tweets.py",
+  "tags": ["X", "Twitter", "profile", "tweets", "timeline"]
+}

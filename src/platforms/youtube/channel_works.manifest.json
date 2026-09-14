@@ -1,0 +1,9 @@
+{
+  "tool_id": "youtube_channel_works",
+  "name": "YouTube 博主作品采集",
+  "category": "YouTube",
+  "summary": "按博主主页链接采集视频类作品和 Posts；Videos/Shorts 使用 YouTube API，Posts 使用页面采集。",
+  "entrypoint": "src.platforms.youtube.windows.YouTubeChannelWorksWindow",
+  "implementation_path": "platforms/youtube/channel_works.py",
+  "tags": ["YouTube", "channel", "videos", "shorts", "posts"]
+}

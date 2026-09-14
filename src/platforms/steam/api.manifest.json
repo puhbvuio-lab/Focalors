@@ -1,0 +1,9 @@
+{
+  "tool_id": "steam_api_research",
+  "name": "Steam API 游戏数据采集",
+  "category": "Steam",
+  "summary": "按 Steam AppID、商店链接或关键词采集游戏商店信息；可选采集玩家评论、玩家画像、公开游戏库、公开好友、新闻、当前在线人数和成就数量。",
+  "entrypoint": "src.platforms.steam.windows.SteamApiResearchWindow",
+  "implementation_path": "platforms/steam/api.py",
+  "tags": ["Steam", "API", "store", "reviews", "news", "games"]
+}

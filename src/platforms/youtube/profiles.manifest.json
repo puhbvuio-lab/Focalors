@@ -1,0 +1,9 @@
+{
+  "tool_id": "youtube_channel_profiles",
+  "name": "YouTube 博主信息",
+  "category": "YouTube",
+  "summary": "从 TXT 读取博主主页链接，导出主页链接、博主名称、频道ID、粉丝量和简介。",
+  "entrypoint": "src.platforms.youtube.windows.YouTubeProfilesWindow",
+  "implementation_path": "platforms/youtube/profiles.py",
+  "tags": ["YouTube", "author", "channel", "profile", "followers"]
+}

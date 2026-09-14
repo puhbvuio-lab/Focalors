@@ -1,0 +1,9 @@
+{
+  "tool_id": "facebook_keyword_search",
+  "category": "Facebook",
+  "name": "Facebook 关键词搜索",
+  "summary": "根据关键词搜索Facebook贴文并进行结构化提取，支持近期排序和评论采集。",
+  "entrypoint": "src.platforms.facebook.windows.FacebookKeywordSearchWindow",
+  "implementation_path": "platforms/facebook/keyword_search.py",
+  "tags": ["Facebook", "keyword", "search", "posts"]
+}

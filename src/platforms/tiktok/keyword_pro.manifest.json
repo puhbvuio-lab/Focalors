@@ -1,0 +1,9 @@
+{
+  "tool_id": "tiktok_keyword_metrics_pro",
+  "name": "TikTok 关键词搜索 Pro",
+  "category": "TikTok",
+  "summary": "TikTok 关键词搜索 Pro：基于时间间隔的自动循环定时采集，支持中途停止和休眠。",
+  "entrypoint": "src.platforms.tiktok.windows.TikTokKeywordProWindow",
+  "implementation_path": "platforms/tiktok/keyword_pro.py",
+  "tags": ["TikTok", "search", "video", "pro"]
+}

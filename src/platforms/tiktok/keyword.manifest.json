@@ -1,0 +1,9 @@
+{
+  "tool_id": "tiktok_keyword_metrics",
+  "name": "TikTok 关键词搜索",
+  "category": "TikTok",
+  "summary": "按关键词搜索 TikTok，并按日期范围过滤发布时间，导出视频标题、播放量、点赞数、收藏量、评论数等指标。",
+  "entrypoint": "src.platforms.tiktok.windows.TikTokKeywordWindow",
+  "implementation_path": "platforms/tiktok/keyword.py",
+  "tags": ["TikTok", "search", "video", "metrics"]
+}

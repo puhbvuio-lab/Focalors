@@ -1,0 +1,9 @@
+{
+  "tool_id": "keyword_candidate_validator",
+  "name": "关键词候选词验证",
+  "category": "数据处理",
+  "summary": "读取标准化采集 Excel，对官方词与候选词结果做两轮 AI 去噪，并输出候选词评分与跨游戏对比。",
+  "entrypoint": "src.processing.windows.KeywordCandidateValidatorWindow",
+  "implementation_path": "processing/keyword_candidate_validator.py",
+  "tags": ["AI", "keyword", "validation", "excel", "compare"]
+}

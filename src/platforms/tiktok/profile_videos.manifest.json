@@ -1,0 +1,9 @@
+{
+  "tool_id": "tiktok_profile_videos",
+  "name": "TikTok 博主视频采集",
+  "category": "TikTok",
+  "summary": "读取博主主页 TXT，按日期范围收集主页视频链接，并进入详情页导出简介、点赞数、评论数和收藏量。",
+  "entrypoint": "src.platforms.tiktok.windows.TikTokProfileVideosWindow",
+  "implementation_path": "platforms/tiktok/profile_videos.py",
+  "tags": ["TikTok", "profile", "videos", "metrics", "date"]
+}

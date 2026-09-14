@@ -1,0 +1,9 @@
+{
+  "tool_id": "tiktok_top_comments",
+  "name": "TikTok 热门评论",
+  "category": "TikTok",
+  "summary": "读取每行一个视频链接的 TXT，通过视频页评论接口抓取主楼评论并导出点赞量最高的前 100 条。",
+  "entrypoint": "src.platforms.tiktok.windows.TikTokCommentsWindow",
+  "implementation_path": "platforms/tiktok/comments.py",
+  "tags": ["TikTok", "comments", "top", "txt"]
+}

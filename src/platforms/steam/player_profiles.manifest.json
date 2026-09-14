@@ -1,0 +1,9 @@
+{
+  "tool_id": "steam_player_profiles",
+  "name": "Steam 评论玩家画像补采",
+  "category": "Steam",
+  "summary": "读取已有 Steam 玩家评论表或手填 SteamID，补采玩家公开资料、公开游戏库、公开好友、最近游玩、目标游戏成就和徽章，用于构建游戏玩家画像。",
+  "entrypoint": "src.platforms.steam.windows.SteamPlayerProfilesWindow",
+  "implementation_path": "platforms/steam/api.py",
+  "tags": ["Steam", "players", "reviews", "profile", "owned_games", "achievements"]
+}

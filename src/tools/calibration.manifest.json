@@ -1,0 +1,9 @@
+{
+  "tool_id": "keyword_coverage_calibration",
+  "name": "关键词实验数据采集",
+  "category": "工具",
+  "summary": "按游戏、平台、语言和关键词独立采集搜索结果，归档 raw 快照并输出标准化采集 Excel。",
+  "entrypoint": "src.tools.windows.CalibrationToolWindow",
+  "implementation_path": "tools/calibration.py",
+  "tags": ["Tools", "Collection", "Keyword", "Excel"]
+}

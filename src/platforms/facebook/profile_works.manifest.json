@@ -1,0 +1,9 @@
+{
+  "tool_id": "facebook_profile_works",
+  "category": "Facebook",
+  "name": "Facebook 博主作品采集",
+  "summary": "根据博主主页链接采集Facebook帖文，区分图文与视频并提取发布时间。",
+  "entrypoint": "src.platforms.facebook.windows.FacebookProfileWorksWindow",
+  "implementation_path": "platforms/facebook/profile_works.py",
+  "tags": ["Facebook", "profile", "posts", "urls"]
+}

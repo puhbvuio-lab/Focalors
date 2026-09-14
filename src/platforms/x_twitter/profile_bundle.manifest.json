@@ -1,0 +1,9 @@
+{
+  "tool_id": "x_profile_bundle",
+  "name": "X 博主信息+推文采集",
+  "category": "X/Twitter",
+  "summary": "按博主主页链接先通过 X 搜索页进入作者主页，再采集作者简介、粉丝数和最新推文样本；默认每个作者最多取最新 50 条。",
+  "entrypoint": "src.platforms.x_twitter.windows.XProfileBundleWindow",
+  "implementation_path": "platforms/x_twitter/profile_bundle.py",
+  "tags": ["X", "Twitter", "profile", "tweets", "bundle", "distributed"]
+}

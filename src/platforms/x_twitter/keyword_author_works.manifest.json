@@ -1,0 +1,9 @@
+{
+  "tool_id": "x_keyword_author_works",
+  "name": "X 关键词作者作品采集",
+  "category": "X/Twitter",
+  "summary": "按关键词发现 X 作者，再通过 X 搜索页进入作者主页采集简介、粉丝数和最新作品标题；快速模式默认每作者最多取最新 50 条。",
+  "entrypoint": "src.platforms.x_twitter.windows.XKeywordAuthorWorksWindow",
+  "implementation_path": "platforms/x_twitter/keyword_author_works.py",
+  "tags": ["X", "Twitter", "keyword", "author", "profile", "works"]
+}

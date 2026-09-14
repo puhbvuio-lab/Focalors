@@ -1,0 +1,9 @@
+{
+  "tool_id": "instagram_profile_works",
+  "name": "Instagram 博主作品采集",
+  "category": "Instagram",
+  "summary": "按博主主页链接滚动采集公开作品，导出作品ID、链接、发布时间、内容和可识别指标。",
+  "entrypoint": "src.platforms.instagram.windows.InstagramProfileWorksWindow",
+  "implementation_path": "platforms/instagram/works.py",
+  "tags": ["Instagram", "profile", "works", "posts", "reels"]
+}

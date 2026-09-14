@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "funina"
+version = "0.1.0"
+description = "Social media data extraction desktop application"
+requires-python = ">=3.10"
+dependencies = [
+    "google-api-python-client>=2.0.0",
+    "langchain>=1.0.0",
+    "langchain-openai>=0.3.0",
+    "numpy>=1.26.0",
+    "openpyxl>=3.1.0",
+    "pandas>=2.2.0",
+    "PyQt5>=5.15.11",
+    "playwright>=1.49.0",
+    "python-dotenv>=1.0.0",
+    "requests>=2.31.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.0.0",
+    "ruff>=0.15.0",
+    "psutil>=7.0.0",
+]
+
+[tool.ruff]
+line-length = 150
+exclude = [
+    ".venv",
+]
+
+[tool.ruff.lint]
+# 显式限定规则集，复刻 ruff 0.15 的默认行为（E4/E7/E9 + F）。
+# ruff 0.16 起默认 select 扩展为全部规则，若不显式限定会让 CI 全项目爆出大量历史告警。
+select = [
+    "E4",
+    "E7",
+    "E9",
+    "F",
+]
+ignore = [
+    "E402", # module level import not at top of file
+    "F841", # local variable assigned but never used (useful but too strict for ui tests like app = QApplication)
+]
+
+[tool.pytest.ini_options]
+testpaths = ["test"]
+markers = [
+    "manual: requires a real browser, network, login state, or external service",
+    "benchmark: long-running performance benchmark excluded from the default suite",
+]
+
+[tool.pixi.workspace]
+name = "funina"
+channels = ["conda-forge"]
+platforms = ["win-64"]
+
+[tool.pixi.pypi-dependencies]
+funina = { path = ".", editable = true }
+pytest = ">=9.0.0"
+ruff = ">=0.15.0"
+psutil = ">=7.0.0"
+
+[tool.pixi.tasks]
+
+[tool.pyright]
+typeCheckingMode = "basic"

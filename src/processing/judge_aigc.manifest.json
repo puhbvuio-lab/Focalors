@@ -1,0 +1,9 @@
+{
+  "tool_id": "judge_aigc",
+  "name": "AIGC 内容判断",
+  "category": "数据处理",
+  "summary": "读取 TXT 文件中的序号和标题，判断是否为 AIGC 内容，并识别主要语言，导出 XLSX 结果。",
+  "entrypoint": "src.processing.windows.JudgeAIGCWindow",
+  "implementation_path": "processing/judge_aigc.py",
+  "tags": ["AIGC", "judge", "title", "xlsx"]
+}

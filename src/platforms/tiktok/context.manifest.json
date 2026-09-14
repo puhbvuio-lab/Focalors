@@ -1,0 +1,9 @@
+{
+  "tool_id": "tiktok_paired_context_metrics",
+  "name": "TikTok 视频上下文数据",
+  "category": "TikTok",
+  "summary": "读取\"视频链接 + 博主主页链接\"TXT，在博主主页定位目标视频并导出前后视频指标。",
+  "entrypoint": "src.platforms.tiktok.windows.TikTokContextWindow",
+  "implementation_path": "platforms/tiktok/context.py",
+  "tags": ["TikTok", "context", "metrics", "txt"]
+}

@@ -1,0 +1,9 @@
+{
+  "tool_id": "xlsx_merge",
+  "name": "XLSX 文件合并",
+  "category": "数据处理",
+  "summary": "选择文件夹，默认只合并文件名包含 keyword 的 .xlsx 文件，并重新生成连续序号。",
+  "entrypoint": "src.processing.windows.XlsxMergeWindow",
+  "implementation_path": "processing/xlsx_merge.py",
+  "tags": ["xlsx", "merge", "keyword", "data"]
+}

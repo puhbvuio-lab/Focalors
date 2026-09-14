@@ -1,0 +1,9 @@
+{
+  "tool_id": "tiktok_hashtag_author_works",
+  "name": "TikTok 话题作者作品采集",
+  "category": "TikTok",
+  "summary": "按话题关键词自动生成 TikTok tag 页面发现博主，每个话题独立最多进入 300 个作者主页采集简介、粉丝数和最新视频；输出“博主信息”“博主对应视频”两个分表。",
+  "entrypoint": "src.platforms.tiktok.windows.TikTokHashtagAuthorWorksWindow",
+  "implementation_path": "platforms/tiktok/hashtag_author_works.py",
+  "tags": ["TikTok", "hashtag", "tag", "author", "profile", "works"]
+}

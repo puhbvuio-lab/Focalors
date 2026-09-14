@@ -1,0 +1,9 @@
+{
+  "tool_id": "x_keyword_video_search",
+  "name": "X 关键词搜索",
+  "category": "X/Twitter",
+  "summary": "按关键词和日期范围搜索 X 推文，导出含视频或图片的原创媒体推文。",
+  "entrypoint": "src.platforms.x_twitter.windows.XKeywordWindow",
+  "implementation_path": "platforms/x_twitter/keyword.py",
+  "tags": ["X", "Twitter", "search", "media", "slice"]
+}

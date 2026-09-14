@@ -1,0 +1,9 @@
+{
+  "tool_id": "youtube_keyword_mining",
+  "name": "YouTube 关键词搜索",
+  "category": "YouTube",
+  "summary": "按关键词和日期范围搜索 YouTube 视频，导出标题、视频类型、时长、播放量、点赞数、评论数、作者粉丝数、视频简介及快照任务。",
+  "entrypoint": "src.platforms.youtube.windows.YouTubeKeywordWindow",
+  "implementation_path": "platforms/youtube/keyword.py",
+  "tags": ["YouTube", "search", "keyword", "metrics"]
+}

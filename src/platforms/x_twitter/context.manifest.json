@@ -1,0 +1,9 @@
+{
+  "tool_id": "x_paired_context_metrics",
+  "name": "X 推文上下文数据",
+  "category": "X/Twitter",
+  "summary": "读取\"推文链接 + 博主主页链接\"TXT，导出目标推文前后各 5 条推文指标。",
+  "entrypoint": "src.platforms.x_twitter.windows.XContextWindow",
+  "implementation_path": "platforms/x_twitter/context.py",
+  "tags": ["X", "Twitter", "context", "metrics", "txt"]
+}

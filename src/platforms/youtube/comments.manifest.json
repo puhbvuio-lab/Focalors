@@ -1,0 +1,9 @@
+{
+  "tool_id": "youtube_top_comments",
+  "name": "YouTube 视频数据与评论采集",
+  "category": "YouTube",
+  "summary": "读取每行一个视频链接的 TXT，批量获取视频热度（播放、点赞等），并可选择导出每个视频点赞量最高的前 100 条主楼评论。",
+  "entrypoint": "src.platforms.youtube.windows.YouTubeCommentsWindow",
+  "implementation_path": "platforms/youtube/comments.py",
+  "tags": ["YouTube", "video", "metrics", "comments", "txt"]
+}

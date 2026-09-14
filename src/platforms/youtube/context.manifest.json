@@ -1,0 +1,9 @@
+{
+  "tool_id": "youtube_paired_context_metrics",
+  "name": "YouTube 视频上下文数据",
+  "category": "YouTube",
+  "summary": "读取\"视频链接 + 博主主页链接\"TXT，定位目标视频，并导出目标前后各 5 条视频指标。",
+  "entrypoint": "src.platforms.youtube.windows.YouTubeContextWindow",
+  "implementation_path": "platforms/youtube/context.py",
+  "tags": ["YouTube", "context", "metrics", "txt"]
+}

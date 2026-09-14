@@ -1,0 +1,9 @@
+{
+  "tool_id": "processing_anomaly_detection",
+  "name": "数据异常分析检测",
+  "category": "数据处理",
+  "summary": "分析 Excel 中的互动数据，基于可配置规则（如倒挂、高基数 0 衍生、比例失调等）甄别异常指标记录。",
+  "entrypoint": "src.processing.windows.AnomalyDetectionWindow",
+  "implementation_path": "processing/anomaly_detection.py",
+  "tags": ["数据处理", "异常检测", "过滤"]
+}

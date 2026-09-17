@@ -14,7 +14,8 @@ def test_discover_all_tools():
     tools, _ = discover_tools()
     print(f"发现 {len(tools)} 个工具")
 
-    assert len(tools) == 32, f"期望 32 个工具，实际 {len(tools)}"
+    assert len(tools) == 33, f"期望 33 个工具，实际 {len(tools)}"
+    assert any(tool.tool_id == "tiktok_video_details" for tool in tools), "未找到 TikTok 视频链接采集工具"
 
     # 验证每个工具都有必要字段
     for tool in tools:
@@ -55,7 +56,7 @@ def test_discover_by_category():
     # 验证每个类别的工具数量
     assert len(categories["YouTube"]) == 5, f"YouTube 工具数量错误: {len(categories['YouTube'])}"
     assert len(categories["X/Twitter"]) == 8, f"X/Twitter 工具数量错误: {len(categories['X/Twitter'])}"
-    assert len(categories["TikTok"]) == 9, f"TikTok 工具数量错误: {len(categories['TikTok'])}"
+    assert len(categories["TikTok"]) == 10, f"TikTok 工具数量错误: {len(categories['TikTok'])}"
     assert len(categories["Instagram"]) == 1, f"Instagram 工具数量错误: {len(categories['Instagram'])}"
     assert len(categories["Facebook"]) == 2, f"Facebook 工具数量错误: {len(categories['Facebook'])}"
     assert len(categories["数据处理"]) == 4, f"数据处理工具数量错误: {len(categories['数据处理'])}"

@@ -1,0 +1,9 @@
+{
+  "tool_id": "tiktok_video_details",
+  "name": "TikTok 视频链接采集",
+  "category": "TikTok",
+  "summary": "读取每行一个 TikTok 视频链接或分享短链，直接导出视频简介、发布时间和互动指标。",
+  "entrypoint": "src.platforms.tiktok.windows.TikTokVideoDetailsWindow",
+  "implementation_path": "platforms/tiktok/video_details.py",
+  "tags": ["TikTok", "video", "url", "metrics", "detail"]
+}

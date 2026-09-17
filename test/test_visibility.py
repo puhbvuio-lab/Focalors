@@ -9,7 +9,7 @@ def test_visibility():
     script = r"""
 from PyQt5.QtWidgets import QApplication
 from src.studio.qt_app import ThreePlatformCrawlerQtApp
-from src.platforms.tiktok.windows import TikTokKeywordWindow, TikTokProfileVideosWindow
+from src.platforms.tiktok.windows import TikTokKeywordWindow, TikTokProfileVideosWindow, TikTokVideoDetailsWindow
 from src.platforms.x_twitter.windows import XKeywordWindow, XTweetMetricsWindow, XProfileTweetsWindow
 from src.platforms.youtube.windows import YouTubeKeywordWindow, YouTubeChannelWorksWindow
 
@@ -18,6 +18,7 @@ windows = [
     ThreePlatformCrawlerQtApp(),
     TikTokKeywordWindow(),
     TikTokProfileVideosWindow(),
+    TikTokVideoDetailsWindow(),
     XKeywordWindow(),
     XTweetMetricsWindow(),
     XProfileTweetsWindow(),

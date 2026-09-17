@@ -290,6 +290,45 @@ class TikTokProfileVideosWindow(SimpleToolWindow):
         )
 
 
+class TikTokVideoDetailsWindow(SimpleToolWindow):
+    tool_id = "tiktok_video_details"
+
+    def __init__(self) -> None:
+        super().__init__(
+            "TikTok 视频链接采集",
+            [
+                FieldSpec(
+                    "txt_path",
+                    "视频链接，每行一个",
+                    kind="text_or_file",
+                    required=True,
+                    placeholder="https://www.tiktok.com/@username/video/123\nhttps://vm.tiktok.com/xxxx/",
+                ),
+            ],
+        )
+
+    def tool_config_params(self):
+        return [
+            ConfigParam("detail_load_timeout", "详情页加载超时(毫秒)", kind="int", default=30000, minimum=10000, maximum=120000, step=1000),
+            ConfigParam("detail_delay_min", "详情页间隔最小(秒)", kind="float", default=2.0, minimum=0.0, maximum=30.0, step=0.5, decimals=1),
+            ConfigParam("detail_delay_max", "详情页间隔最大(秒)", kind="float", default=5.0, minimum=0.0, maximum=60.0, step=0.5, decimals=1),
+        ]
+
+    def run_task(self, values, log_callback, finish_callback, stop_event, pause_event):
+        from src.platforms.tiktok.video_details import run_tiktok_video_details_spider
+
+        config = {key: values[key] for key in ("detail_load_timeout", "detail_delay_min", "detail_delay_max") if key in values}
+        return run_tiktok_video_details_spider(
+            self._text_to_tempfile(values["txt_path"]),
+            DEFAULT_TIKTOK_CDP_URL,
+            log_callback,
+            finish_callback,
+            stop_event,
+            pause_event=pause_event,
+            config=config,
+        )
+
+
 class TikTokProfilePlayCountsWindow(SimpleToolWindow):
     tool_id = "tiktok_profile_play_counts"
 

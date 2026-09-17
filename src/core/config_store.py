@@ -128,6 +128,11 @@ DEFAULT_CONFIGS: dict[str, dict] = {
         "detail_delay_min": 2.0,
         "detail_delay_max": 5.0,
     },
+    "tiktok_video_details": {
+        "detail_load_timeout": 30000,
+        "detail_delay_min": 2.0,
+        "detail_delay_max": 5.0,
+    },
     "tiktok_keyword_author_works": {
         "parallel_windows": 1,
         "max_seed_works": 300,

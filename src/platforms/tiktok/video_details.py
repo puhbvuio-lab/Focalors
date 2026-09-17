@@ -34,6 +34,9 @@ from src.platforms.tiktok.profile_videos import (
 CSV_FIELDS = [
     "序号",
     "视频链接",
+    "CC主页链接",
+    "CC粉丝量",
+    "视频播放量",
     "发布日期",
     "视频简介",
     "点赞数",
@@ -87,7 +90,7 @@ def resolve_video_url(page, source_url: str, timeout: int) -> str:
 
 
 def _detail_has_content(detail: dict[str, str]) -> bool:
-    return any(detail.get(key) for key in ("desc", "published_at", "likes", "comments", "collects", "shares"))
+    return any(detail.get(key) for key in ("desc", "published_at", "plays", "likes", "comments", "collects", "shares"))
 
 
 def run_tiktok_video_details_spider(
@@ -145,6 +148,9 @@ def run_tiktok_video_details_spider(
                         detail = extract_video_detail(page, video_url, detail_load_timeout=detail_load_timeout)
                         row.update({
                             "视频链接": detail.get("video_url", video_url),
+                            "CC主页链接": detail.get("creator_profile_url", ""),
+                            "CC粉丝量": detail.get("creator_followers", ""),
+                            "视频播放量": detail.get("plays", ""),
                             "发布日期": detail.get("published_at", ""),
                             "视频简介": detail.get("desc", ""),
                             "点赞数": detail.get("likes", ""),

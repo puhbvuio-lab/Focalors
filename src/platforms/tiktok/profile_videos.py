@@ -219,6 +219,36 @@ def item_metric(item: dict, *keys: str) -> str:
     return ""
 
 
+def extract_author_metadata(item: dict, video_url: str = "") -> dict[str, str]:
+    """从视频详情状态中提取创作者主页链接与粉丝量。"""
+    author = item.get("author") if isinstance(item, dict) else None
+    author = author if isinstance(author, dict) else {}
+    handle = format_plain_text(
+        author.get("uniqueId") or author.get("unique_id") or author.get("authorUniqueId")
+    ).lstrip("@")
+    profile_url = f"https://www.tiktok.com/@{handle}" if handle else normalize_profile_url(video_url)
+
+    stats_sources = []
+    for key in ("authorStats", "authorStatsV2", "author_stats", "author_stats_v2"):
+        value = item.get(key) if isinstance(item, dict) else None
+        if isinstance(value, dict):
+            stats_sources.append(value)
+    nested_stats = author.get("stats")
+    if isinstance(nested_stats, dict):
+        stats_sources.append(nested_stats)
+
+    followers = ""
+    for stats in stats_sources:
+        for key in ("followerCount", "follower_count", "followers", "fans"):
+            if key in stats:
+                followers = format_count(stats.get(key))
+                if followers:
+                    break
+        if followers:
+            break
+    return {"creator_profile_url": profile_url, "creator_followers": followers}
+
+
 def extract_metric(page, data_e2e_candidates, removable_words=(), default=""):
     """
     DOM 降级兜底方案：从页面中定位指定 data-e2e 候选元素并解析提取其文本统计值。
@@ -452,6 +482,15 @@ def extract_video_detail(page, video_url: str, detail_load_timeout=None) -> dict
         "share_count_str",
         "shares",
     ) if item else ""
+    plays = item_metric(
+        item,
+        "playCount",
+        "play_count",
+        "viewCount",
+        "view_count",
+        "views",
+    ) if item else ""
+    author_metadata = extract_author_metadata(item or {}, video_url)
 
     if not desc:
         desc = extract_tiktok_video_title(page)
@@ -480,6 +519,8 @@ def extract_video_detail(page, video_url: str, detail_load_timeout=None) -> dict
         "comments": format_count(comments),
         "collects": format_count(collects),
         "shares": format_count(shares),
+        "plays": format_count(plays),
+        **author_metadata,
     }
 
 
